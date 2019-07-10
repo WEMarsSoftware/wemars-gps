@@ -50,7 +50,7 @@ void setup()
 }
 
 
-// Interrupt is called once a millisecond, looks for any new GPS data, and stores it
+//Interrupt is called once a millisecond, looks for any new GPS data, and stores it
 SIGNAL(TIMER0_COMPA_vect) {
   char c = GPS.read();
   // if you want to debug, this is a good time to do it!
@@ -77,6 +77,7 @@ void useInterrupt(boolean v) {
 }
 
 uint32_t timer = millis();
+
 void loop()                     // run over and over again
 {
   // in case you are not using the interrupt above, you'll
@@ -133,5 +134,3 @@ void loop()                     // run over and over again
     }
   }
 }
-
-

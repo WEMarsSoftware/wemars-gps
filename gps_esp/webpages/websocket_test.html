@@ -1,0 +1,30 @@
+<html>
+	<head>
+		
+		<p>WEBSOCKET</p>
+		<p id = "ip"> </p>
+		<p id = "stat"> </p>
+
+		<script type = "text/javascript">
+			var ipadress = "ws://192.168.43.5/ws";
+			var status = "DISCONNECTED";
+			var message;
+			document.getElementById("ip").innerHTML = ipadress;
+			document.getElementById("stat").innerHTML = status;
+
+			var ws = new WebSocket("ws://192.168.43.5/ws");
+
+			ws.onopen = function() {
+	  			window.alert("Connected");
+	  			status = "CONNECTED";
+	  		};
+
+	  		ws.onmessage = function(evt) {
+	  			message = String(evt.data);
+	  			window.alert(message);
+			};
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
