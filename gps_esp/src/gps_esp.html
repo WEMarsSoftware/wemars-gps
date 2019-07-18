@@ -1,0 +1,36 @@
+<head>
+	<canvas id = 'my_canvas' width="400" height="400"> </canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById('my_canvas');
+
+		var context = canvas.getContext('2d'); //2d drawing context
+		context.fillStyle = "#FF0000";
+
+		var imgPath = 'img/map.png';
+		var imgObj = new Image();
+		imgObj.src = imgPath;
+		 
+		//coordinates
+		var x = 0;
+		var y = 0;
+
+		//When image has loaded
+		imgObj.onload = function(){
+			context.drawImage(imgObj, x, y); //Draw the image onto the canvas
+		}
+
+
+		//draw circle
+		context.beginPath();
+		context.arc(75, 75, 50, 0, Math.PI * 2, true);
+		context.stroke();
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		
+
+
+	</script>>
+</body>

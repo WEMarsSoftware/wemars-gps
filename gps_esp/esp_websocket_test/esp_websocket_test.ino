@@ -95,6 +95,8 @@ void setup() {
 }
 
 void loop() {
+  
+  
   //if time passed since reset is more than blink rate
   if (millis() - timer >= 10000){
     //if LED was on
